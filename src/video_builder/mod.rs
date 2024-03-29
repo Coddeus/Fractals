@@ -123,9 +123,10 @@ impl VideoBuilder {
         // Add some default options for certain codecs
         match codec.id() {
             codec::Id::H264 | codec::Id::H265 => {
-                context_options.set("preset", "veryslow");
-                context_options.set("crf", "0");
-                context_options.set("tune", "film");
+                // context_options.set("pix_fmt", "yuv420p");
+                // context_options.set("preset", "veryslow");
+                // context_options.set("crf", "17");
+                // context_options.set("tune", "film");
             },
             _ => ()
         };

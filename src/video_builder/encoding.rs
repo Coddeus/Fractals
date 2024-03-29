@@ -49,7 +49,7 @@ impl VideoBuilder {
         #[cfg(debug_assertions)]
         println!("\nOutput format: {}\n", self.out_ctx.format().name());
         match self.out_ctx.format().name() {
-            "mp4" => opts.set("movflags", "faststart"),
+            "mp4" => opts.set("movflags", "+faststart"),
             _ => ()
         };
 
